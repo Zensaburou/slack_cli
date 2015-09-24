@@ -18,11 +18,7 @@ class RealTimeInterface
 
   def message_handler
     @client.on :message do |data|
-      parse_message(data) if data['text']
+      MessageHandler.new.parse_message(data)
     end
-  end
-
-  def parse_message(data)
-    puts(data['channel'] + ' | ' + data['user'] + ' | ' + data['text'])
   end
 end
