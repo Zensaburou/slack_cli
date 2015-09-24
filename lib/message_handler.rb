@@ -9,11 +9,13 @@ class MessageHandler
   end
 
   def channel
-    @message_hash['channel']
+    channel_id = @message_hash['channel']
+    WebInterface.new.find_channel_name(channel_id)
   end
 
   def user
-    @message_hash['user']
+    user_id = @message_hash['user']
+    WebInterface.new.find_user_name(user_id)
   end
 
   def message_body
