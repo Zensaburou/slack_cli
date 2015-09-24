@@ -5,7 +5,7 @@ class MessageHandler
   end
 
   def formatted_output
-    channel + ' | ' + user + ' | ' + text
+    channel + ' | ' + user + ' | ' + message_body
   end
 
   def channel
