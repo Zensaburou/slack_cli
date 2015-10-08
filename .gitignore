@@ -1,1 +1,8 @@
 .env
+
+# Ignore vim swap files
+*.swp
+*.swo
+
+# Ignore rvm settings
+.ruby-*
